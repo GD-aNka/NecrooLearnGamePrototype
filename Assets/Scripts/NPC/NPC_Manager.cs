@@ -20,7 +20,15 @@ public class NPC_Manager : MonoBehaviour
             isTriggered = true;
         }
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isTriggered = false;
 
+        }
+
+    }
     private void Update()
     {
         if (isTriggered && isHavingDialogue && inputManager.isMouseClicked())
@@ -64,7 +72,6 @@ public class NPC_Manager : MonoBehaviour
 
         dialogueBox.gameObject.SetActive(false);
 
-        // Bu NPC-nin dialogue-u artıq bitib
         isHavingDialogue = false;
     }
 }

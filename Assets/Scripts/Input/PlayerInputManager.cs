@@ -23,7 +23,6 @@ public class PlayerInputManager : MonoBehaviour
 
     void Update()
     {
-        
         direction = new Vector2(inputManager.GetMovement().x, 0);
 
         if (inputManager.IsJumpPressed())

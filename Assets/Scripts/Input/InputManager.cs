@@ -21,6 +21,10 @@ public class InputManager : MonoBehaviour
         return playerInputActions.Player.Jump.IsPressed();
     }
 
+    public bool isPausePressed()
+    {
+        return playerInputActions.UI.Pause.WasPressedThisFrame();
+    }
     public bool isMouseClicked()
     {
         return playerInputActions.UI.NextDialogue.WasPressedThisFrame();
